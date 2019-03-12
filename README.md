@@ -5,7 +5,7 @@
 Audit Trails Mechanism for EntityFramework Core
 
 
-This library heavily influenced a great by [blog post](https://www.meziantou.net/2017/08/14/entity-framework-core-history-audit-table) from **GÉRALD BARRÉ**.
+This library heavily influenced by a great [blog post](https://www.meziantou.net/2017/08/14/entity-framework-core-history-audit-table) from **GÉRALD BARRÉ**.
 
 I have attempted to segregate it a bit further.
 
