@@ -20,17 +20,26 @@ namespace Fluentley.AuditTrails.Services
             Audits = new List<AuditTrail>();
         }
 
-        internal List<AuditTrail> Audits { get; }
-
-        public async Task<List<AuditTrail>> SaveChangesAsync(Func<DbContext, Task<int>> method)
+        internal void AddAuditingMethod(Action<List<AuditTrail>> method)
         {
-            var auditEntries = OnBeforeSaveChanges();
-            await method(_context);
-            await OnAfterSaveChanges(auditEntries);
-            return Audits;
+            if (method != null)
+                AuditingAction = method;
         }
 
-        internal List<AuditEntry> OnBeforeSaveChanges()
+        internal Action<List<AuditTrail>> AuditingAction { get; set; }
+
+        private List<AuditTrail> Audits { get; }
+
+        public async Task<int> SaveChangesAsync(Func<DbContext, Task<int>> method)
+        {
+            var auditEntries = OnBeforeSaveChanges();
+            var saveChangesResult = await method(_context);
+            await OnAfterSaveChanges(auditEntries);
+            AuditingAction?.Invoke(Audits);
+            return saveChangesResult;
+        }
+
+        private List<AuditEntry> OnBeforeSaveChanges()
         {
             _context.ChangeTracker.DetectChanges();
             var auditEntries = new List<AuditEntry>();
@@ -115,7 +124,7 @@ namespace Fluentley.AuditTrails.Services
             return auditEntries.Where(_ => _.HasTemporaryProperties).ToList();
         }
 
-        internal Task OnAfterSaveChanges(List<AuditEntry> auditEntries)
+        private Task OnAfterSaveChanges(List<AuditEntry> auditEntries)
         {
             if (auditEntries == null || auditEntries.Count == 0)
                 return Task.CompletedTask;
