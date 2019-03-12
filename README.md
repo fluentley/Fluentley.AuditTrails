@@ -9,10 +9,10 @@ I have attempted to segregate it a bit further.
 ## Usage
 ### 1. Setup dependency injection
 ```csharp
-		public void ConfigureServices(IServiceCollection services)
+	public void ConfigureServices(IServiceCollection services)
         {
 
-			services.AddAuditTrails(options =>
+		services.AddAuditTrails(options =>
 	           {
 	               options.HandleRecordAuditing(auditTrails =>
 	               {
