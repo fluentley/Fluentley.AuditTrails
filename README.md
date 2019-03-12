@@ -1,6 +1,9 @@
 
 # Fluentley Audit Trails
+[![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg)](https://www.nuget.org/packages/Fluentley.EntityFrameWork.AuditTrails.Services/)
+
 Audit Trails Mechanism for EntityFramework Core
+
 
 This library heavily influenced a great by [blog post](https://www.meziantou.net/2017/08/14/entity-framework-core-history-audit-table) from **GÉRALD BARRÉ**.
 
