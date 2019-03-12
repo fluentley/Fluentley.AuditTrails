@@ -3,15 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Fluentley.EntityFrameWork.AuditTrails.Services</PackageId>
+    <PackageId>Fluentley.EntityFramework.AuditTrails.Services</PackageId>
     <Version>1.0.0-alpha.1.0</Version>
     <Authors>Emre@Fluentley</Authors>
     <Company>Fluentley</Company>
     <Product>Fluentley.EntityFrameWork.AuditTrails.Services</Product>
     <Copyright>Copyright © Fluentley 2019</Copyright>
-    <PackageProjectUrl>https://github.com/fluentley/Fluentley.EntityFrameWork.AuditTrails</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/fluentley/Fluentley.EntityFramework.AuditTrails</PackageProjectUrl>
     <PackageIconUrl>https://github.com/fluentley/Fluentley.QueryBuilder/raw/master/FluentleyLogo3.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/fluentley/Fluentley.EntityFrameWork.AuditTrails</RepositoryUrl>
+    <RepositoryUrl>https://github.com/fluentley/Fluentley.EntityFramework.AuditTrails</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Fluent AuditTrails, Fluentley, EntityFramework, AuditTrails</PackageTags>
     <Description>Audit Trails Mechanism for EntityFramework Core</Description>
