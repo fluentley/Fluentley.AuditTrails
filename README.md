@@ -42,10 +42,10 @@ public class DatabaseContext : DbContext
     }
 ```
 ### 3. Using Attributes to determine models to including in auditing
-Default auditing behavior is ignored, we will need to specify the models we need to use auditing.
+Default auditing behavior is ignored, we will need to specify the models we need use for auditing.
 
 ```csharp
-	   [Audit] //Includes model to auditing, any properties below are included.
+	   [Audit] //Includes model for auditing, any properties below are included.
 	   public class Customer
 	   {
 	       public int Id { get; set; }
