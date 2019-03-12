@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Emre@Fluentley</Authors>
+    <Version>1.0.0-alpha.1.0</Version>
+    <Company>Fluentley</Company>
+    <Copyright>Copyright © Fluentley 2019</Copyright>
+    <PackageProjectUrl>https://github.com/fluentley/Fluentley.EntityFrameWork.AuditTrails</PackageProjectUrl>
+    <PackageId>Fluentley.EntityFrameWork.AuditTrails.Core</PackageId>
+    <Product>Fluentley.EntityFrameWork.AuditTrails.Core</Product>
+    <PackageIconUrl>https://github.com/fluentley/Fluentley.QueryBuilder/raw/master/FluentleyLogo3.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/fluentley/Fluentley.EntityFrameWork.AuditTrails</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Fluent AuditTrails, Fluentley, EntityFramework, AuditTrails</PackageTags>
+    <Description>Core models and attributes Required by the service.</Description>
+  </PropertyGroup>
+
+</Project>
